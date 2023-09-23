@@ -59,10 +59,16 @@ export const TodoList = () => {
   };
 
   const handleDoneItem = () => {
+    const mergedItems = [...items, ...listItems.filter((listItem) => !items.some((item) => item.id === listItem.id))];
+
+    setItems(mergedItems);
     setItems((items) => items.filter((item) => item.checked));
   };
 
   const handleDeleteDoneItem = () => {
+    const mergedItems = [...items, ...listItems.filter((listItem) => !items.some((item) => item.id === listItem.id))];
+
+    setItems(mergedItems);
     setItems((items) => items.filter((item) => !item.checked));
   };
 
