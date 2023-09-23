@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 
 export const Form = (props) => {
   const [name, setname] = useState("");
-  const [search, setSearch] = useState(""); // State for search
+  const [search, setSearch] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,21 +32,13 @@ export const Form = (props) => {
               <i className="bg-[#16a3b5] text-white p-2">
                 <FaSearch style={{ fontSize: "1rem" }} />
               </i>
-              <input
-                className="border w-[100%] mt-5 mb-5 h-9"
-                type="text"
-                placeholder="Search Todo"
-                onChange={(e) => setSearch(e.target.value)}
-              />
+              <input className="border w-[100%] mt-5 mb-5 h-9" type="text" placeholder="Search Todo" onChange={(e) => setSearch(e.target.value)} />
             </div>
             <input className="border w-[35%] m-5 h-9" type="text" placeholder="New Todo" value={name} onChange={(e) => setname(e.target.value)} />
           </div>
 
           <div className="flex justify-between w-[100%]">
-            <button
-              className="w-[45%] h-[35px] ml-5 mb-5 rounded-md bg-[#16a3b5] text-white border-black font-light"
-              onClick={handleSearch} 
-            >
+            <button className="w-[45%] h-[35px] ml-5 mb-5 rounded-md bg-[#16a3b5] text-white border-black font-light" onClick={handleSearch}>
               Search
             </button>
             <button className="w-[35%] h-[35px] mr-5 mb-5 rounded-md bg-[#16a3b5] text-white border-black font-light">Add new Task</button>
